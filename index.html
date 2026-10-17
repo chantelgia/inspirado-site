@@ -87,8 +87,13 @@
       <div class="band">
         <div class="eyebrow" style="color:#8f8a81">Be first</div>
         <h2>Stop saving things you'll never make.</h2>
-        <p>InspiraDo is coming to the App Store. Want to know the moment it launches?</p>
-        <a href="mailto:support@inspirado.app?subject=Notify%20me%20about%20InspiraDo" class="btn">Get notified</a>
+        <p>Use InspiraDo now in your browser — and the iPhone app is coming to the App Store. Drop your email and we'll tell you the moment it launches.</p>
+        <form id="wl-form" novalidate style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin-top:8px">
+          <input id="wl-email" type="email" required placeholder="you@email.com" aria-label="Email address"
+            style="font-family:Inter,sans-serif;font-size:16px;padding:12px 16px;border:1px solid rgba(0,0,0,0.15);border-radius:10px;min-width:240px;background:#fff;color:#1A1917" />
+          <button type="submit" class="btn">Notify me</button>
+        </form>
+        <div id="wl-msg" role="status" style="font-family:Inter,sans-serif;font-size:14px;margin-top:12px;min-height:18px;color:#8f8a81"></div>
       </div>
     </section>
   </div>
@@ -106,5 +111,24 @@
     </div>
   </footer>
   <script>for(const e of document.querySelectorAll(".yr"))e.textContent=new Date().getFullYear();</script>
+  <script>
+  (function(){
+    var SB="https://otepuszjiruqwgnuykbc.supabase.co";
+    var KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im90ZXB1c3pqaXJ1cXdnbnV5a2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2MDUxNjQsImV4cCI6MjEwNzE4MTE2NH0.teJWQ8IVewEbBHbHhBNN4g36rU5vs-UuJW2Xvy8_EP8";
+    var form=document.getElementById('wl-form'),inp=document.getElementById('wl-email'),msg=document.getElementById('wl-msg');
+    if(!form) return;
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var email=(inp.value||'').trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.style.color='#8A3B2A';msg.textContent='Please enter a valid email.';return;}
+      msg.style.color='#8f8a81';msg.textContent='Adding you…';
+      try{
+        var r=await fetch(SB+'/rest/v1/waitlist',{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({email:email,source:'website'})});
+        if(r.ok||r.status===409){msg.style.color='#1A1917';msg.textContent="You're on the list — we'll email you when the iPhone app launches. 🎉";form.reset();}
+        else{msg.style.color='#8A3B2A';msg.textContent='Something went wrong. Please try again.';}
+      }catch(err){msg.style.color='#8A3B2A';msg.textContent='Network error. Please try again.';}
+    });
+  })();
+  </script>
 </body>
 </html>
