@@ -120,13 +120,13 @@
     form.addEventListener('submit',async function(e){
       e.preventDefault();
       var email=(inp.value||'').trim();
-      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.style.color='#8A3B2A';msg.textContent='Please enter a valid email.';return;}
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.style.color='#E7A79B';msg.textContent='Please enter a valid email.';return;}
       msg.style.color='#8f8a81';msg.textContent='Adding you…';
       try{
         var r=await fetch(SB+'/rest/v1/waitlist',{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({email:email,source:'website'})});
-        if(r.ok||r.status===409){msg.style.color='#1A1917';msg.textContent="You're on the list — we'll email you when the iPhone app launches. 🎉";form.reset();}
-        else{msg.style.color='#8A3B2A';msg.textContent='Something went wrong. Please try again.';}
-      }catch(err){msg.style.color='#8A3B2A';msg.textContent='Network error. Please try again.';}
+        if(r.ok||r.status===409){msg.style.color='#ECE8E1';msg.textContent="You're on the list — we'll email you when the iPhone app launches. 🎉";form.reset();}
+        else{msg.style.color='#E7A79B';msg.textContent='Something went wrong. Please try again.';}
+      }catch(err){msg.style.color='#E7A79B';msg.textContent='Network error. Please try again.';}
     });
   })();
   </script>
