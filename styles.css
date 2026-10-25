@@ -1,0 +1,119 @@
+/* InspiraDo marketing site — Scandinavian / Kinfolk / Arne Jacobsen.
+   Shared across landing, privacy, support, terms. */
+:root {
+  --bg: #F3F1ED;
+  --surface: #FAF9F6;
+  --ink: #1A1917;
+  --ink-soft: #6E6A63;
+  --ink-faint: #A7A29A;
+  --line: #E4E0D9;
+  --pink: #EFD9DD;
+  --cool: #CBD0D3;
+  --radius: 14px;
+  --maxw: 1040px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+
+/* thin black frame top */
+.topbar { height: 10px; background: var(--ink); }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 24px; max-width: var(--maxw); margin: 0 auto;
+}
+.wordmark {
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  letter-spacing: 7px; font-size: 22px; color: var(--ink);
+}
+.wordmark .dot { color: var(--ink-faint); }
+.navlinks { display: flex; gap: 28px; font-size: 13px; letter-spacing: .5px; color: var(--ink-soft); }
+.navlinks a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { text-align: center; padding: 90px 24px 70px; }
+.hero h1 {
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  letter-spacing: 12px; font-size: clamp(34px, 8vw, 68px);
+  color: var(--ink); margin-bottom: 14px;
+}
+.hero .tagline {
+  font-size: 15px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 28px;
+}
+.hero p.lede {
+  max-width: 560px; margin: 0 auto 36px; font-size: 20px;
+  line-height: 1.55; color: var(--ink-soft);
+}
+.btn {
+  display: inline-block; background: var(--ink); color: var(--surface);
+  padding: 15px 30px; border-radius: 10px; font-size: 15px; font-weight: 600;
+  letter-spacing: .3px; transition: opacity .2s;
+}
+.btn:hover { opacity: .85; }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 10px; }
+.soon { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-top: 18px; }
+
+/* Sections */
+section { padding: 64px 0; }
+.eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+h2 { font-family: 'Jost', sans-serif; font-weight: 400; font-size: clamp(26px, 4vw, 38px); letter-spacing: -.3px; margin-bottom: 14px; }
+.section-intro { max-width: 620px; color: var(--ink-soft); font-size: 18px; margin-bottom: 40px; }
+
+/* Steps (Save / Find / Do) */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.step {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 30px 26px;
+}
+.step .n { font-family: 'Jost', sans-serif; font-weight: 300; font-size: 40px; color: var(--ink-faint); margin-bottom: 12px; }
+.step h3 { font-size: 20px; margin-bottom: 8px; letter-spacing: -.2px; }
+.step p { color: var(--ink-soft); font-size: 16px; }
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.feature { padding: 26px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.feature h3 { font-size: 18px; margin-bottom: 6px; letter-spacing: -.2px; }
+.feature p { color: var(--ink-soft); font-size: 16px; }
+
+/* Band */
+.band { background: var(--ink); color: var(--surface); border-radius: var(--radius); padding: 56px 40px; text-align: center; }
+.band h2 { color: var(--surface); }
+.band p { color: #C9C4BB; max-width: 540px; margin: 0 auto 28px; }
+.band .btn { background: var(--surface); color: var(--ink); }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 40px 0 60px; }
+.footrow { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+.footlinks { display: flex; gap: 24px; font-size: 14px; color: var(--ink-soft); }
+.footlinks a:hover { color: var(--ink); }
+.copyright { font-size: 13px; color: var(--ink-faint); }
+
+/* Legal / content pages */
+.doc { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+.doc h1 { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 40px; letter-spacing: -.5px; margin-bottom: 8px; }
+.doc .updated { color: var(--ink-faint); font-size: 14px; margin-bottom: 36px; }
+.doc h2 { font-size: 22px; margin: 32px 0 10px; }
+.doc p, .doc li { color: var(--ink-soft); margin-bottom: 12px; }
+.doc ul { padding-left: 22px; }
+.doc a { color: var(--ink); text-decoration: underline; }
+.back { font-size: 14px; color: var(--ink-soft); }
+
+@media (max-width: 760px) {
+  .steps, .features { grid-template-columns: 1fr; }
+  .navlinks { display: none; }
+  section { padding: 44px 0; }
+}
