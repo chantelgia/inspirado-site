@@ -17,15 +17,20 @@
 <body>
   <div class="topbar"></div>
 
-  <nav>
-    <div class="wordmark">INSPIRA<span class="dot">·</span>DO</div>
-    <div class="navlinks">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-  </nav>
+  <div class="navbar" id="navbar">
+    <nav>
+      <div class="wordmark">INSPIRA<span class="dot">·</span>DO</div>
+      <div class="navright">
+        <div class="navlinks">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <a href="https://testflight.apple.com/join/ZaFFEAJ7" class="btn btn-nav">Join the beta</a>
+      </div>
+    </nav>
+  </div>
 
   <header class="hero">
     <h1>INSPIRA·DO</h1>
@@ -115,6 +120,7 @@
     </div>
   </footer>
   <script>for(const e of document.querySelectorAll(".yr"))e.textContent=new Date().getFullYear();</script>
+  <script>(function(){var n=document.getElementById('navbar');if(!n)return;var f=function(){n.classList.toggle('scrolled',window.scrollY>8);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
   <script>
   (function(){
     var SB="https://otepuszjiruqwgnuykbc.supabase.co";
