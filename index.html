@@ -3,144 +3,299 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>InspiraDo — Save it. Find it. Do it.</title>
-  <meta name="description" content="Save tutorials and inspiration from anywhere — TikTok, Instagram, YouTube, Pinterest, the web — and turn them into organized projects you actually finish." />
+  <title>InspiraDo — Stop saving. Start doing. | Free on the App Store</title>
+  <meta name="description" content="Save DIY tutorials and ideas from TikTok, Instagram, YouTube, Pinterest and the web, then turn them into organized projects with steps and materials lists. Free on iPhone." />
+  <link rel="canonical" href="https://inspirado.app/" />
+  <meta name="theme-color" content="#F3F1ED" />
+  <!-- iPhone Safari shows an "Open in App Store" banner -->
+  <meta name="apple-itunes-app" content="app-id=6826492571" />
+
+  <!-- Link previews (iMessage, social) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="InspiraDo" />
+  <meta property="og:title" content="InspiraDo — Stop saving. Start doing." />
+  <meta property="og:description" content="Turn the tutorials you save into projects you actually finish. Free on the App Store." />
+  <meta property="og:url" content="https://inspirado.app/" />
+  <meta property="og:image" content="https://inspirado.app/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="preload" as="image" href="img/home-720.webp" type="image/webp" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "InspiraDo",
+    "alternateName": "InspiraDo: Save it. Find it. Do it.",
+    "description": "Save tutorials and ideas from TikTok, Instagram, YouTube, Pinterest and the web, and turn them into organized projects with steps and materials lists.",
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "url": "https://inspirado.app/",
+    "downloadUrl": "https://apps.apple.com/app/id6826492571",
+    "image": "https://inspirado.app/icon-512.png",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Wise Guys Collective LLC", "email": "hello@inspirado.app" }
+  }
+  </script>
 </head>
 <body>
-  <div class="topbar"></div>
 
-  <div class="navbar" id="navbar">
-    <nav>
-      <div class="wordmark">INSPIRA<span class="dot">·</span>DO</div>
-      <div class="navright">
-        <div class="navlinks">
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="support.html">Support</a>
-          <a href="privacy.html">Privacy</a>
-        </div>
-        <a href="https://apps.apple.com/app/id6826492571" class="btn btn-nav">Get the app</a>
-      </div>
-    </nav>
-  </div>
+  <!-- ============ FOUNDING STRIP (remove when Pro launches) ============ -->
+  <a class="strip" href="founding.html" data-track="founding_click" data-placement="strip">
+    <span class="strip-star" aria-hidden="true">✦</span>
+    <span><strong>Founding Members:</strong> join now and get 6 months of Pro free when it launches</span>
+    <span class="strip-arrow" aria-hidden="true">→</span>
+  </a>
 
-  <header class="hero">
-    <h1>INSPIRA·DO</h1>
-    <div class="tagline">Save it. Find it. Do it.</div>
-    <p class="lede">You save hundreds of tutorials you never find again. InspiraDo turns the things you save — from TikTok, Instagram, YouTube, Pinterest, or any website — into organized projects you actually finish.</p>
-    <div class="get-row">
-      <a href="https://apps.apple.com/app/id6826492571" class="appstore-badge"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="156" height="52"></a>
-      <a href="https://app.inspirado.app" class="btn btn-ghost">Try it in your browser</a>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a href="#top" class="wordmark" aria-label="InspiraDo home">INSPIRA<span>·</span>DO</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#for">Who it's for</a>
+      </nav>
+      <a class="btn btn-dark btn-sm" data-appstore="nav" href="https://apps.apple.com/app/apple-store/id6826492571?pt=129671825&amp;ct=website-nav&amp;mt=8">Get the app</a>
     </div>
-    <div class="soon">Free on the App Store · or use it in any browser</div>
   </header>
 
-  <div class="wrap">
-    <section id="how">
-      <div class="eyebrow">The idea</div>
-      <h2>From a saved video to a finished project.</h2>
-      <p class="section-intro">Three simple steps — the whole reason the app exists.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="n">01</div>
-          <h3>Save it</h3>
-          <p>Share any tutorial or idea into InspiraDo — a Reel, a TikTok, a YouTube video, a Pin, or a web page. The original creator link is always kept.</p>
+  <main id="top">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Save it. Find it. Do it.</p>
+        <h1 class="reveal">Stop saving.<br><em>Start doing.</em></h1>
+        <p class="lede reveal">All those tutorials, ideas, and projects you keep saving? InspiraDo helps you organize them, find them, and finally bring them to life.</p>
+        <div class="cta-row reveal">
+          <a class="badge" data-appstore="hero" href="https://apps.apple.com/app/apple-store/id6826492571?pt=129671825&amp;ct=website-hero&amp;mt=8">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="162" height="54" />
+          </a>
+          <a class="link-arrow" data-webapp="hero" href="https://app.inspirado.app">Or try it in your browser <span aria-hidden="true">→</span></a>
         </div>
-        <div class="step">
-          <div class="n">02</div>
-          <h3>Find it</h3>
-          <p>Everything lands in one place, organized into projects and decks — not scattered across five apps you'll never scroll back through.</p>
-        </div>
-        <div class="step">
-          <div class="n">03</div>
-          <h3>Do it</h3>
-          <p>Materials, tools, and clear steps you check off one at a time. Track progress, add photos, and build a history of everything you've actually made.</p>
-        </div>
+        <p class="fine reveal">Free on iPhone</p>
+      </div>
+
+      <div class="hero-phones" aria-hidden="true">
+        <div class="phone phone-l"><img src="img/materials-400.webp" srcset="img/materials-400.webp 400w, img/materials-720.webp 720w" sizes="(min-width: 900px) 240px, 34vw" alt="" width="400" height="866" /></div>
+        <div class="phone phone-c"><img src="img/home-400.webp" srcset="img/home-400.webp 400w, img/home-720.webp 720w" sizes="(min-width: 900px) 290px, 46vw" alt="" width="400" height="866" fetchpriority="high" /></div>
+        <div class="phone phone-r"><img src="img/follow-400.webp" srcset="img/follow-400.webp 400w, img/follow-720.webp 720w" sizes="(min-width: 900px) 240px, 34vw" alt="" width="400" height="866" /></div>
       </div>
     </section>
 
-    <section id="features">
-      <div class="eyebrow">What makes it different</div>
-      <h2>Built to finish, not just collect.</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>One project, many sources</h3>
-          <p>Combine a TikTok, a YouTube video, and a Pinterest image into a single plan — instead of choosing just one tutorial.</p>
+    <div class="platforms reveal" aria-label="Works with">
+      <span>TikTok</span><i></i><span>Instagram</span><i></i><span>YouTube</span><i></i><span>Pinterest</span><i></i><span>Any website</span>
+    </div>
+
+    <!-- ============ 2. THE PROBLEM ============ -->
+    <section class="problem" id="problem">
+      <div class="wrap narrow">
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="reveal">You've saved hundreds of ideas.<br>Now where did they go?</h2>
+        <p class="section-lede reveal">A reel in one app, a pin in another, forty screenshots in your camera roll and a bookmark you'll never open. The inspiration is there. The plan never is.</p>
+      </div>
+
+      <div class="mess" id="mess" aria-hidden="true">
+        <div class="scrap s1"><b>Saved</b><span>214 reels</span></div>
+        <div class="scrap s2"><b>IMG_4021.PNG</b><span>Screenshot</span></div>
+        <div class="scrap s3"><b>Boho shelf ideas</b><span>Pin board</span></div>
+        <div class="scrap s4"><b>Watch later</b><span>38 videos</span></div>
+        <div class="scrap s5"><b>diy arch shelf??</b><span>Notes</span></div>
+        <div class="scrap s6"><b>Bookmarks</b><span>Reading list</span></div>
+        <div class="tidy">
+          <p class="tidy-eyebrow">Home decor</p>
+          <p class="tidy-title">DIY Arch Shelf</p>
+          <p class="tidy-meta">3 tutorials · 8 steps · 7 materials</p>
+          <div class="tidy-bar"><i></i></div>
         </div>
-        <div class="feature">
+      </div>
+      <p class="mess-caption reveal">InspiraDo puts it all in one place, as a plan you can follow.</p>
+    </section>
+
+    <!-- ============ 3. HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="wrap">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="reveal">From saved to made, in four steps.</h2>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>Save your inspiration</h3>
+            <p>Share a TikTok, Reel, YouTube video, Pin or web page straight into InspiraDo. The original link always comes with it.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>Organize it into projects</h3>
+            <p>Group ideas into decks like Decor, Beauty or Garden, and turn the ones you love into projects.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>Turn ideas into steps</h3>
+            <p>Get a clear plan with steps, materials and tools, drafted for you or written your way.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">04</span>
+            <h3>Find it when you're ready</h3>
+            <p>Search everything you've saved, down to a single material, the moment you're ready to make.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4. FEATURES ============
+         To add a feature: copy one <article class="feat"> block, change the text,
+         and set data-shot to a screenshot name in img/ (see README.md). -->
+    <section class="features" id="features">
+      <div class="wrap">
+        <p class="eyebrow reveal">Features</p>
+        <h2 class="reveal">Everything you need to actually finish.</h2>
+      </div>
+
+      <div class="wrap feat-grid">
+        <div class="feat-stage" aria-hidden="true">
+          <div class="phone phone-stage"><img id="stage-img" src="img/home-720.webp" alt="" width="400" height="866" loading="lazy" /></div>
+        </div>
+
+        <div class="feat-list">
+          <article class="feat" data-shot="home">
+            <div class="phone phone-inline"><img src="img/home-400.webp" alt="InspiraDo home screen with decks like Beauty, Crafts and Decor" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">Save from anywhere</p>
+            <h3>All your ideas, finally in one place.</h3>
+            <p>Use the share button in TikTok, Instagram, YouTube, Pinterest or Safari to save into InspiraDo, then sort it into decks that make sense to you.</p>
+          </article>
+
+          <article class="feat" data-shot="materials">
+            <div class="phone phone-inline"><img src="img/materials-400.webp" alt="A project's materials list with quantities and notes" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">AI drafts the plan</p>
+            <h3>A video in, a plan out.</h3>
+            <p>InspiraDo reads the tutorial and drafts the steps, materials and tools for you in seconds. It's a starting point you can edit, so the plan is always yours.</p>
+          </article>
+
+          <article class="feat" data-shot="lists">
+            <div class="phone phone-inline"><img src="img/lists-400.webp" alt="One shopping list grouped by project" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">One shopping list</p>
+            <h3>Everything you need, in one list.</h3>
+            <p>Materials from all your active projects land on one checklist, grouped by project, ready for the craft store.</p>
+          </article>
+
+          <article class="feat" data-shot="follow">
+            <div class="phone phone-inline"><img src="img/follow-400.webp" alt="Follow Mode showing one large step at a time" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">Follow Mode</p>
+            <h3>One big, clear step at a time.</h3>
+            <p>Big, glanceable steps with tips while your hands are busy. Tap to the next one when you're ready.</p>
+          </article>
+
+          <article class="feat" data-shot="search">
+            <div class="phone phone-inline"><img src="img/search-400.webp" alt="Search results for the word table" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">Find it in seconds</p>
+            <h3>Search everything you've saved.</h3>
+            <p>Titles, materials and steps are all searchable. Remember the spray paint but not the project? Just type it.</p>
+          </article>
+
+          <article class="feat" data-shot="made">
+            <div class="phone phone-inline"><img src="img/made-400.webp" alt="The You made it screen with a star rating and notes" width="400" height="866" loading="lazy" /></div>
+            <p class="feat-kicker">Celebrate what you made</p>
+            <h3>A shelf of things you actually did.</h3>
+            <p>Finish a project, rate it, add notes and photos, and watch your Made shelf grow.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Smaller features without their own screenshot -->
+      <div class="wrap mini-grid">
+        <div class="mini reveal">
+          <span class="mini-icon" aria-hidden="true">▢</span>
+          <h3>Screenshots into steps</h3>
+          <p>Saved a tutorial as screenshots? Add them and InspiraDo reads them into a project.</p>
+        </div>
+        <div class="mini reveal">
+          <span class="mini-icon" aria-hidden="true">⧉</span>
+          <h3>Combine tutorials</h3>
+          <p>Mix a TikTok, a YouTube video and a web guide into one plan, instead of picking just one.</p>
+        </div>
+        <div class="mini reveal">
+          <span class="mini-icon" aria-hidden="true">↗</span>
           <h3>Creators always credited</h3>
-          <p>We never re-host anyone's content. Every save links straight back to the original creator with a prominent "View Original."</p>
+          <p>We never re-host anyone's videos. Every project keeps a "View Original" link back to the creator.</p>
         </div>
-        <div class="feature">
-          <h3>Any topic</h3>
-          <p>DIY, recipes, hair, makeup, crafts, fitness, gardening, repairs, tech — if it's a how-to, it belongs here.</p>
-        </div>
-        <div class="feature">
-          <h3>Satisfying to complete</h3>
-          <p>Check off steps, watch your progress fill, and keep a private shelf of everything you've finished.</p>
+        <div class="mini reveal">
+          <span class="mini-icon" aria-hidden="true">◎</span>
+          <h3>Works in your browser</h3>
+          <p>On a computer? Your projects are at app.inspirado.app too.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="band">
-        <div class="eyebrow" style="color:#8f8a81">Now on the App Store</div>
-        <h2>Stop saving things you'll never make.</h2>
-        <p>InspiraDo is free on the App Store for iPhone, or use it in any browser. Want it on iPad or Android? Drop your email and we'll tell you the moment it lands.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px">
-          <a href="https://apps.apple.com/app/id6826492571" class="appstore-badge"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="156" height="52"></a>
-          <a href="https://app.inspirado.app" class="btn" style="background:transparent;color:var(--surface);border:1px solid rgba(255,255,255,0.3)">Try it in your browser</a>
-        </div>
-        <form id="wl-form" novalidate style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin-top:8px">
-          <input id="wl-email" type="email" required placeholder="you@email.com" aria-label="Email address"
-            style="font-family:Inter,sans-serif;font-size:16px;padding:12px 16px;border:1px solid rgba(0,0,0,0.15);border-radius:10px;min-width:240px;background:#fff;color:#1A1917" />
-          <button type="submit" class="btn">Notify me</button>
-        </form>
-        <div id="wl-msg" role="status" style="font-family:Inter,sans-serif;font-size:14px;margin-top:12px;min-height:18px;color:#8f8a81"></div>
+    <!-- ============ 5. WHO IT'S FOR ============ -->
+    <section class="for" id="for">
+      <div class="wrap">
+        <p class="eyebrow reveal">Who it's for</p>
+        <h2 class="reveal">For anyone with a "someday" folder.</h2>
+        <ul class="tiles">
+          <li class="tile t-paper reveal">DIY lovers</li>
+          <li class="tile t-ink reveal">Crafters</li>
+          <li class="tile t-pink reveal">Home decorators</li>
+          <li class="tile t-cool reveal">Beauty lovers</li>
+          <li class="tile t-slate reveal">Cooks</li>
+          <li class="tile t-paper reveal">Makers</li>
+          <li class="tile t-pink reveal">Gardeners</li>
+          <li class="tile t-ink reveal">Fixer-uppers</li>
+        </ul>
+        <p class="section-lede center reveal">…and anyone who saves ideas they want to try someday.</p>
       </div>
     </section>
-  </div>
 
-  <footer>
-    <div class="wrap footrow">
-      <div class="wordmark" style="font-size:18px;letter-spacing:5px">INSPIRA<span class="dot">·</span>DO</div>
-      <div class="footlinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:hello@inspirado.app">Contact</a>
+    <!-- ============ 6. FINAL CTA ============ -->
+    <section class="final">
+      <div class="wrap narrow center">
+        <img class="final-mark reveal" src="favicon.svg" alt="" width="64" height="64" />
+        <h2 class="reveal">Your next great project is already saved somewhere.<br><em>Let's find it.</em></h2>
+        <div class="cta-row center reveal">
+          <a class="badge badge-light" data-appstore="final" href="https://apps.apple.com/app/apple-store/id6826492571?pt=129671825&amp;ct=website-final&amp;mt=8">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="162" height="54" loading="lazy" />
+          </a>
+        </div>
+        <p class="fine reveal">Free on iPhone · <a data-webapp="final" href="https://app.inspirado.app">or use it in your browser</a></p>
       </div>
-      <div class="copyright">© <span class="yr">2026</span> Wise Guys Collective LLC</div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap">
+      <form class="notify" id="wl-form" novalidate>
+        <label for="wl-email">Want InspiraDo on iPad or Android? We'll email you when it lands.</label>
+        <div class="notify-row">
+          <input id="wl-email" type="email" required placeholder="you@email.com" autocomplete="email" />
+          <button type="submit">Notify me</button>
+        </div>
+        <p id="wl-msg" role="status"></p>
+      </form>
+
+      <div class="foot-row">
+        <a href="#top" class="wordmark small">INSPIRA<span>·</span>DO</a>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="founding.html">Founding Members</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+          <a href="mailto:hello@inspirado.app">hello@inspirado.app</a>
+        </nav>
+        <p class="copy">© <span class="yr">2026</span> Wise Guys Collective LLC</p>
+      </div>
     </div>
   </footer>
-  <script>for(const e of document.querySelectorAll(".yr"))e.textContent=new Date().getFullYear();</script>
-  <script>(function(){var n=document.getElementById('navbar');if(!n)return;var f=function(){n.classList.toggle('scrolled',window.scrollY>8);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
-  <script>
-  (function(){
-    var SB="https://otepuszjiruqwgnuykbc.supabase.co";
-    var KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im90ZXB1c3pqaXJ1cXdnbnV5a2JjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2MDUxNjQsImV4cCI6MjEwNzE4MTE2NH0.teJWQ8IVewEbBHbHhBNN4g36rU5vs-UuJW2Xvy8_EP8";
-    var form=document.getElementById('wl-form'),inp=document.getElementById('wl-email'),msg=document.getElementById('wl-msg');
-    if(!form) return;
-    form.addEventListener('submit',async function(e){
-      e.preventDefault();
-      var email=(inp.value||'').trim();
-      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.style.color='#E7A79B';msg.textContent='Please enter a valid email.';return;}
-      msg.style.color='#8f8a81';msg.textContent='Adding you…';
-      try{
-        var r=await fetch(SB+'/rest/v1/waitlist',{method:'POST',headers:{'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({email:email,source:'website'})});
-        if(r.ok||r.status===409){msg.style.color='#ECE8E1';msg.textContent="You're on the list — we'll email you when the iPhone app launches. 🎉";form.reset();}
-        else{msg.style.color='#E7A79B';msg.textContent='Something went wrong. Please try again.';}
-      }catch(err){msg.style.color='#E7A79B';msg.textContent='Network error. Please try again.';}
-    });
-  })();
-  </script>
+
+  <script src="landing.js" defer></script>
 </body>
 </html>
