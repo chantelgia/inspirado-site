@@ -242,7 +242,7 @@ section { padding: 88px 0; }
   .phone-l, .phone-r { width: 236px; }
   .platforms { margin-top: 8px; }
   .steps { grid-template-columns: repeat(4, 1fr); }
-  .mini-grid { grid-template-columns: repeat(4, 1fr); }
+  .mini-grid { grid-template-columns: repeat(3, 1fr); }
 
   /* Sticky phone: the screen changes as you scroll the feature list. */
   .feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
