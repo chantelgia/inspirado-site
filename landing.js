@@ -58,7 +58,7 @@
         if (e.isIntersecting && !seen[id]) { seen[id] = 1; track('section_view', { section: id }); }
       });
     }, { threshold: 0.35 });
-    ['problem', 'how', 'features', 'for'].forEach(function (id) { var el = document.getElementById(id); if (el) so.observe(el); });
+    ['problem', 'how', 'features', 'for', 'pricing', 'faq'].forEach(function (id) { var el = document.getElementById(id); if (el) so.observe(el); });
 
     // ---------- The mess sorts itself into one project ----------
     var mess = document.getElementById('mess');
