@@ -1,0 +1,115 @@
+/* InspiraDo blog: article + blog index styles. Loaded after /landing.css,
+   which supplies the brand tokens, nav, buttons and footer. */
+
+/* ---------- Shared ---------- */
+.crumbs { font-size: 14px; color: var(--ink-faint); margin-bottom: 26px; }
+.crumbs a { color: var(--ink-soft); }
+.crumbs a:hover { color: var(--ink); }
+.crumbs span { margin: 0 8px; }
+
+/* ---------- Blog index ---------- */
+.blog-head { padding: 64px 0 24px; }
+.blog-head h1 { font-size: clamp(44px, 9vw, 72px); letter-spacing: -0.03em; margin-bottom: 18px; }
+.blog-head .section-lede { margin: 0; }
+.post-list { display: grid; gap: 14px; padding: 24px 0 96px; }
+.post-card {
+  display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+  padding: 28px 26px 26px; transition: transform .3s var(--ease), border-color .3s;
+}
+.post-card:hover { transform: translateY(-3px); border-color: var(--ink-faint); }
+.post-card .post-kicker { font: 500 12px/1 'Inter', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--rose); margin-bottom: 14px; }
+.post-card h2 { font-size: clamp(26px, 4.4vw, 32px); margin-bottom: 10px; letter-spacing: -0.015em; line-height: 1.15; }
+.post-card p { color: var(--ink-soft); font-size: 16px; }
+.post-card .post-meta { font-size: 13.5px; color: var(--ink-faint); margin-top: 16px; }
+
+/* ---------- Article ---------- */
+.article { padding: 48px 0 24px; }
+.article-in { max-width: 700px; margin: 0 auto; padding: 0 var(--gutter); }
+.article .post-kicker { font: 500 12px/1 'Inter', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--rose); margin-bottom: 18px; }
+.article h1 { font-size: clamp(38px, 7.4vw, 60px); letter-spacing: -0.03em; line-height: 1.04; margin-bottom: 20px; }
+.dek { font-size: 20px; line-height: 1.5; color: var(--ink-soft); margin-bottom: 26px; }
+.byline { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--ink-soft); padding-bottom: 30px; border-bottom: 1px solid var(--line); margin-bottom: 34px; }
+.byline strong { color: var(--ink); font-weight: 500; }
+.avatar {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%; background: var(--pink); color: var(--ink);
+  font: 400 15px/1 'Jost', sans-serif; letter-spacing: .08em;
+}
+.avatar.lg { width: 54px; height: 54px; font-size: 18px; }
+
+.prose { font-size: 18px; line-height: 1.72; }
+.prose > * + * { margin-top: 22px; }
+.prose h2 { font-size: clamp(28px, 4.8vw, 36px); line-height: 1.15; letter-spacing: -0.02em; margin: 56px 0 0; }
+.prose h3 { font-size: 22px; margin: 36px 0 0; }
+.prose h2 + *, .prose h3 + * { margin-top: 16px; }
+.prose a { text-decoration: underline; text-decoration-color: var(--ink-faint); text-underline-offset: 3px; }
+.prose a:hover { text-decoration-color: var(--ink); }
+.prose strong { font-weight: 600; }
+.prose ul, .prose ol { padding-left: 0; }
+.prose ul li { position: relative; padding-left: 24px; }
+.prose ul li::before { content: ''; position: absolute; left: 4px; top: .72em; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
+.prose ol { counter-reset: n; }
+.prose ol li { position: relative; padding-left: 44px; counter-increment: n; }
+.prose ol li::before {
+  content: counter(n); position: absolute; left: 0; top: .1em; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--paper); font: 500 14px/28px 'Inter', sans-serif; text-align: center; color: var(--ink);
+}
+.prose li + li { margin-top: 12px; }
+.prose li p { margin-top: 6px; }
+
+/* "Quick answer" summary near the top (also what search and AI assistants quote). */
+.quick { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px 24px 22px; font-size: 17px; line-height: 1.62; }
+.quick-label { font: 500 12px/1 'Inter', sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 12px; }
+.quick ol li { padding-left: 36px; }
+.quick ol li::before { width: 24px; height: 24px; line-height: 24px; font-size: 13px; background: var(--bg); }
+.quick li + li { margin-top: 8px; }
+.quick p + ol, .quick ol + p { margin-top: 12px; }
+
+.tip { background: var(--pink); border-radius: 18px; padding: 20px 22px; font-size: 16.5px; line-height: 1.6; }
+.tip b { font-weight: 600; }
+
+.shot { margin: 40px 0; text-align: center; }
+.shot .phone { width: min(62vw, 270px); margin: 0 auto; }
+.shot figcaption { font-size: 14.5px; color: var(--ink-soft); margin: 18px auto 0; max-width: 420px; line-height: 1.5; }
+
+.template {
+  background: var(--ink); color: var(--cream); border-radius: 18px; padding: 22px 24px; overflow-x: auto;
+  font: 400 14.5px/1.7 ui-monospace, 'SF Mono', Menlo, monospace; white-space: pre;
+}
+
+/* FAQ uses the landing page's .faq details styling. */
+.prose .faq-list { margin-top: 20px; }
+.prose .faq summary { font-size: 17px; }
+.prose .faq details p { font-size: 16.5px; }
+
+/* App call-to-action card */
+.cta-card { background: var(--ink); color: var(--surface); border-radius: 24px; padding: 34px 28px 30px; text-align: center; margin: 56px 0 0; }
+.cta-card h2 { font-size: clamp(28px, 5vw, 38px); margin: 0 0 12px; color: var(--surface); }
+.cta-card h2 em { color: #D98C9C; font-style: normal; }
+.cta-card p { color: #BDB7AD; font-size: 16.5px; max-width: 440px; margin: 0 auto 24px; }
+.cta-card .cta-row { justify-content: center; }
+.cta-card .link-arrow { color: var(--surface); border-bottom-color: rgba(242, 231, 211, .25); }
+.cta-card .fine { color: #8F8A81; margin-top: 16px; }
+
+/* Author box */
+.author { display: flex; gap: 16px; align-items: flex-start; border-top: 1px solid var(--line); padding-top: 30px; margin-top: 56px; }
+.author b { display: block; font-weight: 600; font-size: 16px; margin-bottom: 4px; }
+.author p { font-size: 15.5px; color: var(--ink-soft); line-height: 1.6; }
+
+/* Related posts */
+.related { max-width: 700px; margin: 0 auto; padding: 56px var(--gutter) 96px; }
+.related h2 { font-size: 28px; margin-bottom: 18px; }
+.related .post-list { padding: 0; }
+.related .post-card h2, .related .post-card h3 { font-size: 22px; margin-bottom: 6px; }
+
+@media (min-width: 640px) {
+  .post-list { grid-template-columns: 1fr 1fr; }
+  .post-list .post-card:first-child { grid-column: 1 / -1; }
+  .related .post-list { grid-template-columns: 1fr 1fr; }
+  .related .post-list .post-card:first-child { grid-column: auto; }
+}
+@media (min-width: 960px) {
+  .article { padding-top: 72px; }
+  .blog-head { padding-top: 88px; }
+}
+.nw { white-space: nowrap; }

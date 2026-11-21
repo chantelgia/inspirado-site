@@ -1,0 +1,24 @@
+# InspiraDo
+
+> InspiraDo is an iPhone app (also on the web at app.inspirado.app) that turns DIY and how-to tutorials saved from TikTok, Instagram, YouTube, Pinterest and the web into organized projects with step-by-step instructions, a materials list, a tools list and a shopping list. Tagline: "Save it. Find it. Do it."
+
+- Save from any app with the iPhone share sheet, or paste a link.
+- "Generate project with AI" reads a tutorial's narration and caption (YouTube: the AI watches the video) and lays out steps, materials and tools. Silent videos and carousels: "Add from screenshots".
+- Combine several tutorials into one de-duplicated plan. Follow Mode shows one large step at a time, hands-free.
+- Always keeps a link to the original creator's post; never downloads or re-hosts videos.
+- Pricing: free to save and organize, with 7 AI-built projects included. InspiraDo Pro adds 50 AI-built projects a month for $4.99/month or $39.99/year (US).
+- Founder & CEO: Chantel Gia. Contact: hello@inspirado.app
+
+## Guides
+
+- [How to Turn TikTok Videos Into Step-by-Step Instructions](https://inspirado.app/blog/tiktok-to-step-by-step-instructions/)
+- [How to Create a Materials List From a DIY Video](https://inspirado.app/blog/materials-list-from-diy-video/)
+- [How to Organize Your Saved Instagram Tutorials](https://inspirado.app/blog/organize-saved-instagram-tutorials/)
+
+## Links
+
+- [Website](https://inspirado.app/)
+- [App Store](https://apps.apple.com/app/id6826492571)
+- [Web app](https://app.inspirado.app/)
+- [Support](https://inspirado.app/support.html)
+- [Privacy](https://inspirado.app/privacy.html)
